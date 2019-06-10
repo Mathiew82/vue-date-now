@@ -18,9 +18,9 @@ export default {
   name: 'home',
   data () {
     return {
-      dateNow: this.$timer.dateNow(new Date(), 'dd-mm-yyyy', '/'),
-      textNow: this.$timer.textNow(new Date()),
-      howLong: this.$timer.howLong(new Date('January 31 2019 12:30'))
+      dateNow: this.$dn.dateNow(new Date(), 'dd-mm-yyyy', '/'),
+      textNow: this.$dn.textNow(new Date()),
+      howLong: this.$dn.howLong(new Date('January 31 2019 12:30'))
     }
   }
 }

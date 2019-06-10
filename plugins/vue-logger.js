@@ -1,6 +1,6 @@
 export default {
   install (Vue, options) {
-    Vue.prototype.$timer = {
+    Vue.prototype.$dn = {
       dateNow: (date, format = 'dd-mm-yyyy', separator = '/') => {
         const YEAR = date.getFullYear()
         let month = date.getMonth()
