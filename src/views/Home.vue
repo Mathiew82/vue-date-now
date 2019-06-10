@@ -18,9 +18,12 @@ export default {
   name: 'home',
   data () {
     return {
+      // dateNow received 3 params: date, [format, separator]
       dateNow: this.$dn.dateNow(new Date(), 'dd-mm-yyyy', '/'),
+      // dateNow received 1 params: date
       textNow: this.$dn.textNow(new Date()),
-      howLong: this.$dn.howLong(new Date('January 31 2019 12:30'))
+      // dateNow received 1 params: timestamp
+      howLong: this.$dn.howLong(new Date('June 11 2019 00:51'))
     }
   }
 }
