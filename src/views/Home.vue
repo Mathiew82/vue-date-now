@@ -2,10 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <p>
-      {{ dateNow }}
+      {{ date }}
     </p>
     <p>
-      {{ textNow }}
+      {{ textDate }}
     </p>
     <p>
       {{ howLong }}
@@ -19,11 +19,11 @@ export default {
   data () {
     return {
       // dateNow received 3 params: date, [format, separator]
-      dateNow: this.$dn.dateNow(new Date(), 'dd-mm-yyyy', '/'),
+      date: this.$dn.date(new Date(), 'dd-mm-yyyy', '-'),
       // dateNow received 1 params: date
-      textNow: this.$dn.textNow(new Date()),
+      textDate: this.$dn.textDate(new Date()),
       // dateNow received 1 params: timestamp
-      howLong: this.$dn.howLong(new Date('June 11 2019 00:51'))
+      howLong: this.$dn.howLong(new Date('June 10 2019 23:11'))
     }
   }
 }
