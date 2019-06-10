@@ -1,18 +1,27 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>
+      {{ dateNow }}
+    </p>
+    <p>
+      {{ textNow }}
+    </p>
+    <p>
+      {{ howLong }}
+    </p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      dateNow: this.$timer.dateNow(new Date(), 'dd-mm-yyyy', '/'),
+      textNow: this.$timer.textNow(new Date()),
+      howLong: this.$timer.howLong(new Date('January 31 2019 12:30'))
+    }
   }
 }
 </script>
