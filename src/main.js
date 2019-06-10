@@ -2,9 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import logger from '../plugins/vue-logger.js'
+import DateNow from '../plugins/vue-date-now.js'
 
-Vue.use(logger)
+Vue.use(DateNow)
 
 Vue.config.productionTip = false
 
