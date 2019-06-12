@@ -19,6 +19,9 @@
     <p>
       {{ monthText }}
     </p>
+    <p>
+      {{ time }}
+    </p>
   </div>
 </template>
 
@@ -38,9 +41,9 @@ export default {
       // dateText: this.$dn.dateText('2014-04-22 22:56:47'),
 
       // howLong received 1 params: Date, date or timestamp
-      howLong: this.$dn.howLong(new Date('2019-04-08'), 'es'),
-      // howLong: this.$dn.howLong('2016-04-22'),
-      // howLong: this.$dn.howLong('2014-04-22 22:56:47'),
+      // howLong: this.$dn.howLong(new Date('2019-04-08'), 'es'),
+      howLong: this.$dn.howLong('2016-04-22', 'es'),
+      // howLong: this.$dn.howLong('2014-04-22 22:56:47', 'es'),
 
       // year received 1 params: [Date, date or timestamp]
       year: this.$dn.year(new Date()),
@@ -59,6 +62,8 @@ export default {
       // monthText: this.$dn.monthText('2016-01-22', 'es'),
       monthText: this.$dn.monthText('2014-03-22 22:56:47', 'es'),
       // monthText: this.$dn.monthText('', , 'es')
+
+      time: this.$dn.time()
     }
   }
 }

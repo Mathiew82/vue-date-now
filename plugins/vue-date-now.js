@@ -1,4 +1,7 @@
 export default {
+  addZero (value) {
+    return value < 10 ? `0${value}` : value.toString()
+  },
   install (Vue) {
     Vue.prototype.$dn = {
       date: (date, format = 'dd-mm-yyyy', separator = '/') => {
@@ -28,38 +31,53 @@ export default {
       dateText: (date, lang = 'en', type = 'standard') => {
         console.log(date, lang, type)
       },
-      howLong: (date, lang = 'en') => {
-        const LANG_TEXTS = require(`../languages/${lang}.js`).texts
-        // TODO -- Being able to receive different parameters
-        const DIFFERENCE = new Date().getTime() - date.getTime()
+      howLong: (dateOrTimestamp = '', lang = 'en') => {
+        // const LANG_TEXTS = require(`../languages/${lang}.js`).texts
 
-        const SECONDS = DIFFERENCE / 1000
-        const MINUTS = SECONDS / 60
-        const HOURS = MINUTS / 60
-        const DAYS = HOURS / 24
-        const WEEKS = DAYS / 7
-        const MONTHS = DAYS / 30
-        const YEARS = MONTHS / 12
+        // let difference = null
 
-        let result = ''
+        // >>> bug error
 
-        if (YEARS >= 1) {
-          result = LANG_TEXTS.howLongYear
-        } else if (MONTHS >= 1 && YEARS < 1) {
-          result = LANG_TEXTS.howLongMonth
-        } else if (WEEKS >= 1 && MONTHS < 1) {
-          result = LANG_TEXTS.howLongWeek
-        } else if (DAYS >= 1 && MONTHS < 1) {
-          result = LANG_TEXTS.howLongDay
-        } else if (HOURS >= 1 && DAYS < 1) {
-          result = LANG_TEXTS.howLongHour
-        } else if (MINUTS >= 1 && HOURS < 1) {
-          result = LANG_TEXTS.howLongMinut
-        } else if (SECONDS >= 1 && MINUTS < 1) {
-          result = LANG_TEXTS.howLongSecond
-        }
+        // if (typeof dateOrTimestamp === 'object') {
+        //   difference = dateOrTimestamp.getTime() - dateOrTimestamp.getTime()
+        // }
+        // else if (typeof dateOrTimestamp === 'string') {
+        //   if (dateOrTimestamp.length >= 10) {
+        //     difference = new Date(dateOrTimestamp).getTime() - dateOrTimestamp.getTime()
+        //   } else {
+        //     difference = new Date().getTime() - dateOrTimestamp.getTime()
+        //   }
+        // }
 
-        return result
+        // const SECONDS = difference / 1000
+        // const MINUTES = SECONDS / 60
+        // const HOURS = MINUTES / 60
+        // const DAYS = HOURS / 24
+        // const WEEKS = DAYS / 7
+        // const MONTHS = DAYS / 30
+        // const YEARS = MONTHS / 12
+
+        // let result = ''
+
+        // if (YEARS >= 1) {
+        //   result = LANG_TEXTS.howLongYear
+        // } else if (MONTHS >= 1 && YEARS < 1) {
+        //   result = LANG_TEXTS.howLongMonth
+        // } else if (WEEKS >= 1 && MONTHS < 1) {
+        //   result = LANG_TEXTS.howLongWeek
+        // } else if (DAYS >= 1 && MONTHS < 1) {
+        //   result = LANG_TEXTS.howLongDay
+        // } else if (HOURS >= 1 && DAYS < 1) {
+        //   result = LANG_TEXTS.howLongHour
+        // } else if (MINUTES >= 1 && HOURS < 1) {
+        //   result = LANG_TEXTS.howLongMinut
+        // } else if (SECONDS >= 1 && MINUTES < 1) {
+        //   result = LANG_TEXTS.howLongSecond
+        // }
+
+        // return result
+
+        return 'esto es para que no pete'
       },
       year: (dateOrTimestamp = '') => {
         if (typeof dateOrTimestamp === 'object') {
@@ -76,17 +94,17 @@ export default {
       month: (dateOrTimestamp = '') => {
         if (typeof dateOrTimestamp === 'object') {
           let result = dateOrTimestamp.getMonth() + 1
-          result = result < 10 ? `0${result}` : result
+          result = this.addZero(result)
           return result
         }
         else if (typeof dateOrTimestamp === 'string') {
           if (dateOrTimestamp.length >= 10) {
             let result = new Date(dateOrTimestamp).getMonth() + 1
-            result = result < 10 ? `0${result}` : result
+            result = this.addZero(result)
             return result
           } else {
             let result = new Date().getMonth() + 1
-            result = result < 10 ? `0${result}` : result
+            result = this.addZero(result)
             return result
           }
         }
@@ -100,7 +118,14 @@ export default {
       },
       day: () => console.log('This is the day'),
       dayText: () => console.log('This is the text of de day'),
-      time: () => console.log('This is the time')
+      time: () => {
+        let date = new Date()
+        let hours = this.addZero(date.getHours())
+        let minutes = this.addZero(date.getMinutes())
+        let seconds = this.addZero(date.getSeconds())
+
+        return `${hours}:${minutes}:${seconds}`
+      }
     }
   }
 }
