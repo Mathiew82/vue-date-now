@@ -32,52 +32,43 @@ export default {
         console.log(date, lang, type)
       },
       howLong: (dateOrTimestamp = '', lang = 'en') => {
-        // const LANG_TEXTS = require(`../languages/${lang}.js`).texts
+        const LANG_TEXTS = require(`../languages/${lang}.js`).texts
 
-        // let difference = null
+        let difference = null
 
-        // >>> bug error
+        if (typeof dateOrTimestamp === 'object') {
+          difference = new Date().getTime() - dateOrTimestamp.getTime()
+        } else {
+          difference = new Date().getTime() - new Date(dateOrTimestamp).getTime()
+        }
 
-        // if (typeof dateOrTimestamp === 'object') {
-        //   difference = dateOrTimestamp.getTime() - dateOrTimestamp.getTime()
-        // }
-        // else if (typeof dateOrTimestamp === 'string') {
-        //   if (dateOrTimestamp.length >= 10) {
-        //     difference = new Date(dateOrTimestamp).getTime() - dateOrTimestamp.getTime()
-        //   } else {
-        //     difference = new Date().getTime() - dateOrTimestamp.getTime()
-        //   }
-        // }
+        const SECONDS = difference / 1000
+        const MINUTES = SECONDS / 60
+        const HOURS = MINUTES / 60
+        const DAYS = HOURS / 24
+        const WEEKS = DAYS / 7
+        const MONTHS = DAYS / 30
+        const YEARS = MONTHS / 12
 
-        // const SECONDS = difference / 1000
-        // const MINUTES = SECONDS / 60
-        // const HOURS = MINUTES / 60
-        // const DAYS = HOURS / 24
-        // const WEEKS = DAYS / 7
-        // const MONTHS = DAYS / 30
-        // const YEARS = MONTHS / 12
+        let result = ''
 
-        // let result = ''
+        if (YEARS >= 1) {
+          result = LANG_TEXTS.howLongYear
+        } else if (MONTHS >= 1 && YEARS < 1) {
+          result = LANG_TEXTS.howLongMonth
+        } else if (WEEKS >= 1 && MONTHS < 1) {
+          result = LANG_TEXTS.howLongWeek
+        } else if (DAYS >= 1 && MONTHS < 1) {
+          result = LANG_TEXTS.howLongDay
+        } else if (HOURS >= 1 && DAYS < 1) {
+          result = LANG_TEXTS.howLongHour
+        } else if (MINUTES >= 1 && HOURS < 1) {
+          result = LANG_TEXTS.howLongMinut
+        } else if (SECONDS >= 1 && MINUTES < 1) {
+          result = LANG_TEXTS.howLongSecond
+        }
 
-        // if (YEARS >= 1) {
-        //   result = LANG_TEXTS.howLongYear
-        // } else if (MONTHS >= 1 && YEARS < 1) {
-        //   result = LANG_TEXTS.howLongMonth
-        // } else if (WEEKS >= 1 && MONTHS < 1) {
-        //   result = LANG_TEXTS.howLongWeek
-        // } else if (DAYS >= 1 && MONTHS < 1) {
-        //   result = LANG_TEXTS.howLongDay
-        // } else if (HOURS >= 1 && DAYS < 1) {
-        //   result = LANG_TEXTS.howLongHour
-        // } else if (MINUTES >= 1 && HOURS < 1) {
-        //   result = LANG_TEXTS.howLongMinut
-        // } else if (SECONDS >= 1 && MINUTES < 1) {
-        //   result = LANG_TEXTS.howLongSecond
-        // }
-
-        // return result
-
-        return 'esto es para que no pete'
+        return result
       },
       year: (dateOrTimestamp = '') => {
         if (typeof dateOrTimestamp === 'object') {

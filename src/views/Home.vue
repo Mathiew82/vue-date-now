@@ -42,8 +42,8 @@ export default {
 
       // howLong received 1 params: Date, date or timestamp
       // howLong: this.$dn.howLong(new Date('2019-04-08'), 'es'),
-      howLong: this.$dn.howLong('2016-04-22', 'es'),
-      // howLong: this.$dn.howLong('2014-04-22 22:56:47', 'es'),
+      // howLong: this.$dn.howLong('2016-04-22', 'es'),
+      howLong: this.$dn.howLong('2019-06-12 10:56:47', 'es'),
 
       // year received 1 params: [Date, date or timestamp]
       year: this.$dn.year(new Date()),
