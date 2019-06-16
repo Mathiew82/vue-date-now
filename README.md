@@ -1,26 +1,39 @@
-# test-plugin-vue
+# vue-date-now
 
-## Project setup
-```
-yarn install
-```
+Easily work with dates using the available method.
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+[![npm](https://img.shields.io/npm/v/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/react.svg)](https://www.npmjs.com/package/vue-date-now)
+[![npm](https://img.shields.io/npm/dt/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
+[![NpmLicense](https://img.shields.io/npm/l/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+Install:
 
-### Run your tests
-```
-yarn run test
-```
+    npm install vue-date-now
 
-### Lints and fixes files
-```
-yarn run lint
-```
+or
+
+    yarn add vue-date-now
+
+Enable it in your project:
+
+    import VueDateNow from 'vue-date-now';
+    
+    Vue.use(VueDateNow);
+
+Use the available methods:
+
+    export default {
+      name: 'app',
+      data () {
+        return {
+          year: this.$dn.year(new Date()),
+          monthText: this.$dn.monthText(new Date())
+        }
+      }
+    }
+    
+## Methods
+
+Very soon I will add the documentation
+
