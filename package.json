@@ -13,7 +13,6 @@
     "vue",
     "plugin"
   ],
-  "private": true,
   "scripts": {
     "build": "babel --optional runtime src -d dist"
   },
