@@ -28,9 +28,6 @@ export default {
 
         return result.slice(0, -1)
       },
-      dateText: (date, lang = 'en', type = 'standard') => {
-        // console.log(date, lang, type)
-      },
       howLong: (dateOrTimestamp = '', lang = 'en') => {
         const LANG_TEXTS = require(`../languages/${lang}.js`).texts
 

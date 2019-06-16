@@ -2,31 +2,28 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <p>
-      <b>Una fecha:</b> {{ date }}
+      <b>A date:</b> {{ date }}
     </p>
     <p>
-      <!-- {{ dateText }} -->
+      <b>How long ago?</b> {{ howLong }}
     </p>
     <p>
-      <b>¿Cuánto hace?</b> {{ howLong }}
+      <b>A year:</b> {{ year }}
     </p>
     <p>
-      <b>Un año:</b> {{ year }}
+      <b>A month:</b> {{ month }}
     </p>
     <p>
-      <b>Un mes:</b> {{ month }}
+      <b>A month in text:</b> {{ monthText }}
     </p>
     <p>
-      <b>Un mes en texto:</b> {{ monthText }}
+      <b>A day:</b> {{ day }}
     </p>
     <p>
-      <b>Un día:</b> {{ day }}
+      <b>A day in text:</b> {{ dayText }}
     </p>
     <p>
-      <b>Un día en texto:</b> {{ dayText }}
-    </p>
-    <p>
-      <b>La hora:</b> {{ time }}
+      <b>The time:</b> {{ time }}
     </p>
   </div>
 </template>
@@ -41,15 +38,10 @@ export default {
       // date: this.$dn.date('2016-04-22', 'dd-mm-yyyy', '-'),
       // date: this.$dn.date('2014-04-22 22:56:47', 'dd-mm-yyyy', '-'),
 
-      // dateText received 1 params: Date, date or timestamp
-      // dateText: this.$dn.dateText(new Date()),
-      // dateText: this.$dn.dateText('2016-04-22'),
-      // dateText: this.$dn.dateText('2014-04-22 22:56:47'),
-
       // howLong received 1 params: Date, date or timestamp
-      // howLong: this.$dn.howLong(new Date('2019-04-08'), 'es'),
+      howLong: this.$dn.howLong(new Date('2019-04-08'), 'en'),
       // howLong: this.$dn.howLong('2016-04-22', 'es'),
-      howLong: this.$dn.howLong('2019-06-12 10:56:47', 'es'),
+      // howLong: this.$dn.howLong('2019-06-12 10:56:47', 'es'),
 
       // year received 1 params: [Date, date or timestamp]
       year: this.$dn.year(new Date()),
@@ -64,7 +56,7 @@ export default {
       // month: this.$dn.month()
 
       // monthText received 1 params: [Date, date or timestamp]
-      monthText: this.$dn.monthText(new Date(), 'es'),
+      monthText: this.$dn.monthText(new Date(), 'en'),
       // monthText: this.$dn.monthText('2016-01-22', 'es'),
       // monthText: this.$dn.monthText('2014-03-22 22:56:47', 'es'),
       // monthText: this.$dn.monthText('', 'es'),
@@ -76,7 +68,7 @@ export default {
       // day: this.$dn.day()
 
       // dayText received 1 params: [Date, date or timestamp]
-      dayText: this.$dn.dayText(new Date(), 'es'),
+      dayText: this.$dn.dayText(new Date(), 'en'),
       // dayText: this.$dn.dayText('2016-01-22', 'es'),
       // dayText: this.$dn.dayText('2014-03-22 22:56:47', 'es'),
       // dayText: this.$dn.dayText('', 'es'),
