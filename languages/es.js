@@ -1,4 +1,13 @@
 export const texts = {
+  days: [
+    'Domingo',
+    'Lunes',
+    'Martes',
+    'Miércoles',
+    'Jueves',
+    'Viernes',
+    'Sábado'
+  ],
   howLongYear: 'Hace más de un año',
   howLongMonth: 'Hace unos meses',
   howLongWeek: 'Hace unas semanas',

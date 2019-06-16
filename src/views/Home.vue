@@ -2,25 +2,31 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <p>
-      {{ date }}
+      <b>Una fecha:</b> {{ date }}
     </p>
     <p>
       <!-- {{ dateText }} -->
     </p>
     <p>
-      {{ howLong }}
+      <b>¿Cuánto hace?</b> {{ howLong }}
     </p>
     <p>
-      {{ year }}
+      <b>Un año:</b> {{ year }}
     </p>
     <p>
-      {{ month }}
+      <b>Un mes:</b> {{ month }}
     </p>
     <p>
-      {{ monthText }}
+      <b>Un mes en texto:</b> {{ monthText }}
     </p>
     <p>
-      {{ time }}
+      <b>Un día:</b> {{ day }}
+    </p>
+    <p>
+      <b>Un día en texto:</b> {{ dayText }}
+    </p>
+    <p>
+      <b>La hora:</b> {{ time }}
     </p>
   </div>
 </template>
@@ -58,10 +64,22 @@ export default {
       // month: this.$dn.month()
 
       // monthText received 1 params: [Date, date or timestamp]
-      // monthText: this.$dn.monthText(new Date(), 'es'),
+      monthText: this.$dn.monthText(new Date(), 'es'),
       // monthText: this.$dn.monthText('2016-01-22', 'es'),
-      monthText: this.$dn.monthText('2014-03-22 22:56:47', 'es'),
-      // monthText: this.$dn.monthText('', , 'es')
+      // monthText: this.$dn.monthText('2014-03-22 22:56:47', 'es'),
+      // monthText: this.$dn.monthText('', 'es'),
+
+      // day received 1 params: [Date, date or timestamp]
+      day: this.$dn.day(new Date()),
+      // day: this.$dn.day('2016-04-22'),
+      // day: this.$dn.day('2014-04-22 22:56:47'),
+      // day: this.$dn.day()
+
+      // dayText received 1 params: [Date, date or timestamp]
+      dayText: this.$dn.dayText(new Date(), 'es'),
+      // dayText: this.$dn.dayText('2016-01-22', 'es'),
+      // dayText: this.$dn.dayText('2014-03-22 22:56:47', 'es'),
+      // dayText: this.$dn.dayText('', 'es'),
 
       time: this.$dn.time()
     }

@@ -29,7 +29,7 @@ export default {
         return result.slice(0, -1)
       },
       dateText: (date, lang = 'en', type = 'standard') => {
-        console.log(date, lang, type)
+        // console.log(date, lang, type)
       },
       howLong: (dateOrTimestamp = '', lang = 'en') => {
         const LANG_TEXTS = require(`../languages/${lang}.js`).texts
@@ -73,8 +73,7 @@ export default {
       year: (dateOrTimestamp = '') => {
         if (typeof dateOrTimestamp === 'object') {
           return dateOrTimestamp.getFullYear()
-        }
-        else if (typeof dateOrTimestamp === 'string') {
+        } else if (typeof dateOrTimestamp === 'string') {
           if (dateOrTimestamp.length >= 10) {
             return new Date(dateOrTimestamp).getFullYear()
           } else {
@@ -87,8 +86,7 @@ export default {
           let result = dateOrTimestamp.getMonth() + 1
           result = this.addZero(result)
           return result
-        }
-        else if (typeof dateOrTimestamp === 'string') {
+        } else if (typeof dateOrTimestamp === 'string') {
           if (dateOrTimestamp.length >= 10) {
             let result = new Date(dateOrTimestamp).getMonth() + 1
             result = this.addZero(result)
@@ -101,14 +99,42 @@ export default {
         }
       },
       monthText: function (dateOrTimestamp = '', lang = 'en') {
-        const MONTH = this.month(dateOrTimestamp)
-        const RESULT = new Date(`2019-${MONTH}-01`).toLocaleString(lang, { month: 'long' })
-        const RESULT_CAPITALIZED = RESULT.charAt(0).toUpperCase() + RESULT.slice(1)
-
-        return RESULT_CAPITALIZED
+        if (typeof dateOrTimestamp === 'object') {
+          const RESULT = dateOrTimestamp.toLocaleString(lang, { month: 'long' })
+          const RESULT_CAPITALIZED = RESULT.charAt(0).toUpperCase() + RESULT.slice(1)
+          return RESULT_CAPITALIZED
+        } else if (typeof dateOrTimestamp === 'string') {
+          if (dateOrTimestamp.length >= 10) {
+            const RESULT = new Date(dateOrTimestamp).toLocaleString(lang, { month: 'long' })
+            const RESULT_CAPITALIZED = RESULT.charAt(0).toUpperCase() + RESULT.slice(1)
+            return RESULT_CAPITALIZED
+          } else {
+            const RESULT = new Date().toLocaleString(lang, { month: 'long' })
+            const RESULT_CAPITALIZED = RESULT.charAt(0).toUpperCase() + RESULT.slice(1)
+            return RESULT_CAPITALIZED
+          }
+        }
       },
-      day: () => console.log('This is the day'),
-      dayText: () => console.log('This is the text of de day'),
+      day: (dateOrTimestamp = '', lang = 'en') => {
+        if (typeof dateOrTimestamp === 'object') {
+          let result = dateOrTimestamp.getDay() + 1
+          return result
+        } else if (typeof dateOrTimestamp === 'string') {
+          if (dateOrTimestamp.length >= 10) {
+            let result = new Date(dateOrTimestamp).getDay() + 1
+            return result
+          } else {
+            let result = new Date().getDay() + 1
+            return result
+          }
+        }
+      },
+      dayText: function (dateOrTimestamp = '', lang = 'en') {
+        const DAY = this.day(dateOrTimestamp) - 1
+        const LANG_DAYS = require(`../languages/${lang}.js`).texts.days
+
+        return LANG_DAYS[DAY]
+      },
       time: () => {
         let date = new Date()
         let hours = this.addZero(date.getHours())
