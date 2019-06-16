@@ -1,28 +1,28 @@
 {
   "name": "vue-date-now",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Plugin to work with dates in vue.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mathiew82/vue-date-now.git"
+  },
+  "author": "Alberto Mateo Alcalá",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "plugin"
+  ],
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "babel --optional runtime src -d dist"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-rename-umd-globals": "^1.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.5.0"
   }
 }
