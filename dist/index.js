@@ -157,15 +157,15 @@
           var lang = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
 
           if ((typeof dateOrTimestamp === 'undefined' ? 'undefined' : _typeof(dateOrTimestamp)) === 'object') {
-            var result = dateOrTimestamp.getDay() + 1;
-            return result;
+            var RESULT = dateOrTimestamp.getDay() + 1;
+            return RESULT;
           } else if (typeof dateOrTimestamp === 'string') {
             if (dateOrTimestamp.length >= 10) {
-              var _result3 = new Date(dateOrTimestamp).getDay() + 1;
-              return _result3;
+              var _RESULT3 = new Date(dateOrTimestamp).getDay() + 1;
+              return _RESULT3;
             } else {
-              var _result4 = new Date().getDay() + 1;
-              return _result4;
+              var _RESULT4 = new Date().getDay() + 1;
+              return _RESULT4;
             }
           }
         },
@@ -179,12 +179,12 @@
           return LANG_DAYS[DAY];
         },
         time: function time() {
-          var date = new Date();
-          var hours = _this.addZero(date.getHours());
-          var minutes = _this.addZero(date.getMinutes());
-          var seconds = _this.addZero(date.getSeconds());
+          var DATE = new Date();
+          var HOURS = _this.addZero(DATE.getHours());
+          var MINUTES = _this.addZero(DATE.getMinutes());
+          var SECONDS = _this.addZero(DATE.getSeconds());
 
-          return hours + ':' + minutes + ':' + seconds;
+          return HOURS + ':' + MINUTES + ':' + SECONDS;
         }
       };
     }
