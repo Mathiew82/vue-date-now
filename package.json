@@ -1,6 +1,6 @@
 {
   "name": "vue-date-now",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin to work with dates in vue.",
   "main": "dist/index.js",
   "repository": {
