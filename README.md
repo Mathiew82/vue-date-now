@@ -42,7 +42,7 @@ Use the available methods:
 | Methods              | Parameters                                 | How to use                                                     | Result                    |
 |:---------------------|:-------------------------------------------|:---------------------------------------------------------------|:--------------------------|
 | this.$dn.date        | Date(Object), format(o), separator(o)      | this.$dn.date(new Date(), 'dd-mm-yyyy', '/')                   | 17/06/2019                |
-| this.$dn.howLong     | Date(Object) or timestamp(String) or       | this.$dn.howLong(new Date('2019-04-08'), 'en')                 | A few months ago          |
+| this.$dn.howLong     | Date(Object) or date(String) or            | this.$dn.howLong(new Date('2019-04-08'), 'en')                 | A few months ago          |
 |                      | timestamp(String), lang(o)                 | this.$dn.howLong('2016-04-22', 'en')                           | More than a year ago      |
 |                      |                                            | this.$dn.howLong('2019-06-17 10:56:47', 'es')                  | Hace unas horas           |
 | this.$dn.year        | Date(Object)(o) or date(String)(o) or      | this.$dn.year(new Date())                                      | 2019                      |
