@@ -114,15 +114,15 @@ export default {
       },
       day: (dateOrTimestamp = '', lang = 'en') => {
         if (typeof dateOrTimestamp === 'object') {
-          let result = dateOrTimestamp.getDay() + 1
-          return result
+          const RESULT = dateOrTimestamp.getDay() + 1
+          return RESULT
         } else if (typeof dateOrTimestamp === 'string') {
           if (dateOrTimestamp.length >= 10) {
-            let result = new Date(dateOrTimestamp).getDay() + 1
-            return result
+            const RESULT = new Date(dateOrTimestamp).getDay() + 1
+            return RESULT
           } else {
-            let result = new Date().getDay() + 1
-            return result
+            const RESULT = new Date().getDay() + 1
+            return RESULT
           }
         }
       },
@@ -133,12 +133,12 @@ export default {
         return LANG_DAYS[DAY]
       },
       time: () => {
-        let date = new Date()
-        let hours = this.addZero(date.getHours())
-        let minutes = this.addZero(date.getMinutes())
-        let seconds = this.addZero(date.getSeconds())
+        let DATE = new Date()
+        let HOURS = this.addZero(DATE.getHours())
+        let MINUTES = this.addZero(DATE.getMinutes())
+        let SECONDS = this.addZero(DATE.getSeconds())
 
-        return `${hours}:${minutes}:${seconds}`
+        return `${HOURS}:${MINUTES}:${SECONDS}`
       }
     }
   }
