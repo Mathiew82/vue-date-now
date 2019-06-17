@@ -1,5 +1,7 @@
 # vue-date-now
 
+![](images/Logo_DateNow_Vue-min.png)
+
 Easily work with dates using the available method.
 
 [![npm](https://img.shields.io/npm/v/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
