@@ -32,7 +32,7 @@
 
       Vue.prototype.$dn = {
         date: function date(_date) {
-          var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'dd-mm-yyyy';
+          var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
           var separator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '/';
 
           var YEAR = _date.getFullYear();
