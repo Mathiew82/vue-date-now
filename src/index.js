@@ -4,7 +4,7 @@ export default {
   },
   install (Vue) {
     Vue.prototype.$dn = {
-      date: (date, format = 'dd-mm-yyyy', separator = '/') => {
+      date: (date, format = 'yyyy-mm-dd', separator = '/') => {
         const YEAR = date.getFullYear()
         let month = date.getMonth()
         let day = date.getDate()
