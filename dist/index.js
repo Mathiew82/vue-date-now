@@ -35,9 +35,11 @@
           var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
           var separator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '/';
 
-          var YEAR = _date.getFullYear();
-          var month = _date.getMonth();
-          var day = _date.getDate();
+          var DATE = !_date ? new Date() : _date;
+
+          var YEAR = DATE.getFullYear();
+          var month = DATE.getMonth() + 1;
+          var day = DATE.getDate();
 
           var MONTH = month < 10 ? '0' + month : month;
           var DAY = day < 10 ? '0' + day : day;
@@ -154,7 +156,6 @@
         },
         day: function day() {
           var dateOrTimestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          var lang = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
 
           if ((typeof dateOrTimestamp === 'undefined' ? 'undefined' : _typeof(dateOrTimestamp)) === 'object') {
             var RESULT = dateOrTimestamp.getDay() + 1;
