@@ -41,23 +41,26 @@ Use the available methods:
 
 ### Note: This documentation has been created on 2019-06-17.
 
-| Methods              | Parameters                                                                                                   |
-|:---------------------|:-------------------------------------------------------------------------------------------------------------|
-| this.$dn.date        | Date:Object, format:String(opcional, default = 'yyyy-mm-dd'), separator:String(opcional, default = '/')      |
-| this.$dn.howLong     | Date:Object or date:String or timestamp:String, lang(opcional, default = 'en')                               |
-| this.$dn.year        | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                 |
-| this.$dn.month       | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                 |
-| this.$dn.monthText   | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional default = 'en')  |
-| this.$dn.day         | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                 |
-| this.$dn.dayText     | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional default = 'en')  |
-| this.$dn.time        | none                                                                                                         |
+| Methods              | Parameters                                                                                                         |
+|:---------------------|:-------------------------------------------------------------------------------------------------------------------|
+| this.$dn.date        | Date:Object(opcional), format:String(opcional, default = 'yyyy-mm-dd'), separator:String(opcional, default = '/')  |
+| this.$dn.howLong     | Date:Object or date:String or timestamp:String, lang(opcional, default = 'en')                                     |
+| this.$dn.year        | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
+| this.$dn.month       | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
+| this.$dn.monthText   | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
+| this.$dn.day         | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
+| this.$dn.dayText     | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
+| this.$dn.time        | none                                                                                                               |
 
 
 ## How to use
 
 | Example                                                        | Result                    |
 |:---------------------------------------------------------------|:--------------------------|
-| this.$dn.date(new Date(), 'dd-mm-yyyy', '/')                   | 17/06/2019                |
+| this.$dn.date(new Date(), 'dd-mm-yyyy', '-')                   | 17-06-2019                |
+| this.$dn.date(new Date(), 'dd-mm-yyyy')                        | 17/06/2019                |
+| this.$dn.date(new Date())                                      | 2019/06/17                |
+| this.$dn.date()                                                | 2019/06/17                |
 | this.$dn.howLong(new Date('2019-04-08'), 'en')                 | A few months ago          |
 | this.$dn.howLong('2016-04-22', 'en')                           | More than a year ago      |
 | this.$dn.howLong('2019-06-17 10:56:47', 'es')                  | Hace unas horas           |

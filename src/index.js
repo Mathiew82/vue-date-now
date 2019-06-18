@@ -5,9 +5,11 @@ export default {
   install (Vue) {
     Vue.prototype.$dn = {
       date: (date, format = 'yyyy-mm-dd', separator = '/') => {
-        const YEAR = date.getFullYear()
-        let month = date.getMonth()
-        let day = date.getDate()
+        const DATE = !date ? new Date() : date
+
+        const YEAR = DATE.getFullYear()
+        let month = DATE.getMonth() + 1
+        let day = DATE.getDate()
 
         const MONTH = month < 10 ? `0${month}` : month
         const DAY = day < 10 ? `0${day}` : day
@@ -112,7 +114,7 @@ export default {
           }
         }
       },
-      day: (dateOrTimestamp = '', lang = 'en') => {
+      day: (dateOrTimestamp = '') => {
         if (typeof dateOrTimestamp === 'object') {
           const RESULT = dateOrTimestamp.getDay() + 1
           return RESULT
