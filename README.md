@@ -37,9 +37,9 @@ Use the available methods:
       }
     }
     
-## Methods
-
 ### Note: This documentation has been created on 2019-06-17.
+
+## Methods
 
 | Methods              | Parameters                                                                                                         |
 |:---------------------|:-------------------------------------------------------------------------------------------------------------------|
