@@ -9,6 +9,7 @@ Feel free to collaborate. I would like to expand translations, so if you dare! ð
 [![npm](https://img.shields.io/npm/v/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/react.svg)](https://www.npmjs.com/package/vue-date-now)
 [![npm](https://img.shields.io/npm/dt/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
+[![License](https://img.shields.io/github/license/Mathiew82/vue-date-now.svg?style=flat)](https://github.com/Mathiew82/vue-date-now/blob/master/LICENSE.md)
 [![NpmLicense](https://img.shields.io/npm/l/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
 
 Install:
@@ -31,8 +32,8 @@ Use the available methods:
       name: 'app',
       data () {
         return {
-          year: this.$dn.year(new Date()),
-          monthText: this.$dn.monthText(new Date())
+          year: this.$dn.year(),
+          monthText: this.$dn.monthText()
         }
       }
     }
