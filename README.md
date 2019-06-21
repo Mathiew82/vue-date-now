@@ -7,10 +7,10 @@ Easily work with dates using the available methods.
 Feel free to collaborate. I would like to expand translations, so if you dare! 🚀
 
 [![npm](https://img.shields.io/npm/v/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
-[![npm](https://img.shields.io/npm/dt/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
-[![HitCount](http://hits.dwyl.io/Mathiew82/vue-date-now.svg)](http://hits.dwyl.io/Mathiew82/vue-date-now)
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/react.svg)](https://www.npmjs.com/package/vue-date-now)
+[![npm](https://img.shields.io/npm/dt/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
 [![dependencies Status](https://david-dm.org/Mathiew82/vue-date-now/status.svg)](https://david-dm.org/Mathiew82/vue-date-now)
+[![HitCount](http://hits.dwyl.io/Mathiew82/vue-date-now.svg)](http://hits.dwyl.io/Mathiew82/vue-date-now)
 [![NpmLicense](https://img.shields.io/npm/l/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
 
 Install:
