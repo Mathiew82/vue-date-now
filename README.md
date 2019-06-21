@@ -42,10 +42,14 @@ export default {
     }
 }
 ```
-    
-### Note: This documentation has been created on 2019-06-17.
 
-## Methods
+&nbsp;
+## Documentation
+    
+#### Note: This documentation has been created on 2019-06-17.
+
+&nbsp;
+### Methods
 
 | Methods              | Parameters                                                                                                         |
 |:---------------------|:-------------------------------------------------------------------------------------------------------------------|
@@ -58,8 +62,8 @@ export default {
 | this.$dn.dayText     | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
 | this.$dn.time        | none                                                                                                               |
 
-
-## How to use
+&nbsp;
+### How to use
 
 | Example                                                        | Result                    |
 |:---------------------------------------------------------------|:--------------------------|
