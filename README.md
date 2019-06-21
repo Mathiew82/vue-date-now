@@ -21,21 +21,25 @@ or
 
 Enable it in your project:
 
-    import VueDateNow from 'vue-date-now';
+```js
+import VueDateNow from 'vue-date-now';
     
-    Vue.use(VueDateNow);
+Vue.use(VueDateNow);
+```
 
 Use the available methods:
 
-    export default {
-      name: 'app',
-      data () {
+```js
+export default {
+    name: 'app',
+    data () {
         return {
-          year: this.$dn.year(),
-          monthText: this.$dn.monthText()
+            year: this.$dn.year(),
+            monthText: this.$dn.monthText()
         }
-      }
     }
+}
+```
     
 ### Note: This documentation has been created on 2019-06-17.
 
