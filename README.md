@@ -13,15 +13,18 @@ Feel free to collaborate. I would like to expand translations, so if you dare! ð
 [![HitCount](http://hits.dwyl.io/Mathiew82/vue-date-now.svg)](http://hits.dwyl.io/Mathiew82/vue-date-now)
 [![NpmLicense](https://img.shields.io/npm/l/vue-date-now.svg)](https://www.npmjs.com/package/vue-date-now)
 
-Install:
+&nbsp;
+#### Install with npm:
 
     npm install vue-date-now
 
-or
+#### or install with yarn
 
     yarn add vue-date-now
 
-Enable it in your project:
+
+&nbsp;
+#### Enable it in your project:
 
 ```js
 import VueDateNow from 'vue-date-now';
@@ -29,7 +32,8 @@ import VueDateNow from 'vue-date-now';
 Vue.use(VueDateNow);
 ```
 
-Use the available methods:
+&nbsp;
+#### Use the available methods:
 
 ```js
 export default {
