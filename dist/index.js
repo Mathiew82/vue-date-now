@@ -179,6 +179,40 @@
 
           return LANG_DAYS[DAY];
         },
+        diff: function diff(dateOrTimestamp1, dateOrTimestamp2) {
+          var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'days';
+
+          var firstDate = null;
+
+          if ((typeof dateOrTimestamp1 === 'undefined' ? 'undefined' : _typeof(dateOrTimestamp1)) === 'object') {
+            firstDate = dateOrTimestamp1.getTime();
+          } else if (typeof dateOrTimestamp1 === 'string') {
+            firstDate = new Date(dateOrTimestamp1).getTime();
+          }
+
+          var SECOND_DATE = new Date(dateOrTimestamp2).getTime();
+          var difference = firstDate - SECOND_DATE;
+
+          var result = '';
+
+          if (type === 'seconds') {
+            result = difference / 1000;
+          } else if (type === 'minuts') {
+            result = difference / 60000;
+          } else if (type === 'hours') {
+            result = difference / 3600000;
+          } else if (type === 'days') {
+            result = difference / 86400000;
+          } else if (type === 'weeks') {
+            result = difference / 604800000;
+          } else if (type === 'months') {
+            result = difference / 2592000000;
+          } else if (type === 'years') {
+            result = difference / 31536000000;
+          }
+
+          return result.toFixed(1);
+        },
         time: function time() {
           var DATE = new Date();
           var HOURS = _this.addZero(DATE.getHours());
