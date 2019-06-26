@@ -69,7 +69,7 @@ export default {
 
 &nbsp;
 ### Options
-Languages: en, es
+Languages: 'en', 'es'
 
 diff method / type: 'seconds', 'minuts', 'hours', 'days', 'weeks', 'months', 'years'
 
