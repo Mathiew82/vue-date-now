@@ -53,6 +53,13 @@ export default {
 #### Note: This documentation has been created on 2019-06-17.
 
 &nbsp;
+### Available languages
+[
+    'en',
+    'es'
+]
+
+&nbsp;
 ### Methods
 
 | Methods              | Parameters                                                                                                            |
@@ -106,10 +113,3 @@ export default {
 | this.$dn.diff('2019-03-15', '2016-08-21', 'months')            | 31.2                      |
 | this.$dn.diff('2019-03-15', '2016-08-21')                      | 936.0                     |
 | this.$dn.time()                                                | 18:31:48                  |
-
-&nbsp;
-### Languages
-[
-    'en',
-    'es'
-]
