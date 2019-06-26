@@ -68,6 +68,12 @@ export default {
 | this.$dn.time        | none                                                                                                               |
 
 &nbsp;
+### Options
+Languages: en, es
+
+diff method / type: 'seconds', 'minuts', 'hours', 'days', 'weeks', 'months', 'years'
+
+&nbsp;
 ### How to use
 
 | Example                                                        | Result                    |
