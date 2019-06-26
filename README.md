@@ -64,6 +64,7 @@ export default {
 | this.$dn.monthText   | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
 | this.$dn.day         | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
 | this.$dn.dayText     | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
+| this.$dn.diff        | Date:Object or date:String or timestamp:String, date:String or timestamp:String, type(opcional, default = 'days')  |
 | this.$dn.time        | none                                                                                                               |
 
 &nbsp;
@@ -100,4 +101,7 @@ export default {
 | this.$dn.dayText('2014-03-22 22:56:47', 'es')                  | Sábado                    |
 | this.$dn.dayText('', 'en')                                     | Monday                    |
 | this.$dn.dayText()                                             | Monday                    |
+| this.$dn.diff(new Date(), '2016-08-21', 'years')               | 2.8                       |
+| this.$dn.diff('2019-03-15', '2016-08-21', 'months')            | 31.2                      |
+| this.$dn.diff('2019-03-15', '2016-08-21')                      | 936.0                     |
 | this.$dn.time()                                                | 18:31:48                  |

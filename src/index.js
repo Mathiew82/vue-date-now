@@ -134,6 +134,38 @@ export default {
 
         return LANG_DAYS[DAY]
       },
+      diff: (dateOrTimestamp1, dateOrTimestamp2, type = 'days') => {
+        let firstDate = null
+
+        if (typeof dateOrTimestamp1 === 'object') {
+          firstDate = dateOrTimestamp1.getTime()
+        } else if (typeof dateOrTimestamp1 === 'string') {
+          firstDate = new Date(dateOrTimestamp1).getTime()
+        }
+
+        const SECOND_DATE = new Date(dateOrTimestamp2).getTime()
+        let difference = firstDate - SECOND_DATE
+
+        let result = ''
+
+        if (type === 'seconds') {
+          result = (difference / 1000)
+        } else if (type === 'minuts') {
+          result = (difference / 60000)
+        } else if (type === 'hours') {
+          result = (difference / 3600000)
+        } else if (type === 'days') {
+          result = (difference / 86400000)
+        } else if (type === 'weeks') {
+          result = (difference / 604800000)
+        } else if (type === 'months') {
+          result = (difference / 2592000000)
+        } else if (type === 'years') {
+          result = (difference / 31536000000)
+        }
+
+        return result.toFixed(1)
+      },
       time: () => {
         let DATE = new Date()
         let HOURS = this.addZero(DATE.getHours())
