@@ -55,23 +55,18 @@ export default {
 &nbsp;
 ### Methods
 
-| Methods              | Parameters                                                                                                         |
-|:---------------------|:-------------------------------------------------------------------------------------------------------------------|
-| this.$dn.date        | Date:Object(opcional), format:String(opcional, default = 'yyyy-mm-dd'), separator:String(opcional, default = '/')  |
-| this.$dn.howLong     | Date:Object or date:String or timestamp:String, lang(opcional, default = 'en')                                     |
-| this.$dn.year        | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
-| this.$dn.month       | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
-| this.$dn.monthText   | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
-| this.$dn.day         | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                       |
-| this.$dn.dayText     | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')       |
-| this.$dn.diff        | Date:Object or date:String or timestamp:String, date:String or timestamp:String, type(opcional, default = 'days')  |
-| this.$dn.time        | none                                                                                                               |
-
-&nbsp;
-### Options
-Languages: 'en', 'es'
-
-diff method / type: 'seconds', 'minuts', 'hours', 'days', 'weeks', 'months', 'years'
+| Methods              | Parameters                                                                                                            |
+|:---------------------|:----------------------------------------------------------------------------------------------------------------------|
+| this.$dn.date        | Date:Object(opcional), format:String(opcional, default = 'yyyy-mm-dd'), separator:String(opcional, default = '/')     |
+| this.$dn.howLong     | Date:Object or date:String or timestamp:String, lang(opcional, default = 'en')                                        |
+| this.$dn.year        | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                          |
+| this.$dn.month       | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                          |
+| this.$dn.monthText   | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')          |
+| this.$dn.day         | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional)                                          |
+| this.$dn.dayText     | Date:Object(opcional) or date:String(opcional) or timestamp:String(opcional), lang(opcional, default = 'en')          |
+| this.$dn.diff        | Date:Object or date:String or timestamp:String, date:String or timestamp:String, type(opcional, default = 'days')     |
+|                      | Most recent date, Less recent date, Type of result = 'seconds', 'minuts', 'hours', 'days', 'weeks', 'months', 'years' |
+| this.$dn.time        | none                                                                                                                  |
 
 &nbsp;
 ### How to use
@@ -111,3 +106,10 @@ diff method / type: 'seconds', 'minuts', 'hours', 'days', 'weeks', 'months', 'ye
 | this.$dn.diff('2019-03-15', '2016-08-21', 'months')            | 31.2                      |
 | this.$dn.diff('2019-03-15', '2016-08-21')                      | 936.0                     |
 | this.$dn.time()                                                | 18:31:48                  |
+
+&nbsp;
+### Languages
+[
+    'en',
+    'es'
+]
