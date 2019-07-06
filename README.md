@@ -53,11 +53,14 @@ export default {
 #### Note: This documentation has been created on 2019-06-17.
 
 &nbsp;
-### Available languages
-[
-    'en',
-    'es'
-]
+### Languages available for howLong and dayText methods
+| Slug | Language        |
+|:-----|:----------------|
+| es   | Spanish         |
+| en   | English         |
+
+&nbsp;
+### The monthText method supports all languages thanks to the toLocaleString() method of js
 
 &nbsp;
 ### Methods
@@ -78,38 +81,38 @@ export default {
 &nbsp;
 ### How to use
 
-| Example                                                        | Result                    |
-|:---------------------------------------------------------------|:--------------------------|
-| this.$dn.date(new Date(), 'dd-mm-yyyy', '-')                   | 17-06-2019                |
-| this.$dn.date(new Date(), 'dd-mm-yyyy')                        | 17/06/2019                |
-| this.$dn.date(new Date())                                      | 2019/06/17                |
-| this.$dn.date()                                                | 2019/06/17                |
-| this.$dn.howLong(new Date('2019-04-08'), 'en')                 | A few months ago          |
-| this.$dn.howLong('2016-04-22', 'en')                           | More than a year ago      |
-| this.$dn.howLong('2019-06-17 10:56:47', 'es')                  | Hace unas horas           |
-| this.$dn.year(new Date())                                      | 2019                      |
-| this.$dn.year('2016-04-22')                                    | 2016                      |
-| this.$dn.year('2014-04-22 22:56:47')                           | 2014                      |
-| this.$dn.year()                                                | 2019                      |
-| this.$dn.month(new Date())                                     | 06                        |
-| this.$dn.month('2016-04-22')                                   | 04                        |
-| this.$dn.month('2014-02-14 22:56:47')                          | 02                        |
-| this.$dn.month()                                               | 06                        |
-| this.$dn.monthText(new Date(), 'en')                           | June                      |
-| this.$dn.monthText('2016-01-22', 'es')                         | Enero                     |
-| this.$dn.monthText('2014-03-22 22:56:47', 'es')                | Marzo                     |
-| this.$dn.monthText('', 'en')                                   | June                      |
-| this.$dn.monthText()                                           | June                      |
-| this.$dn.day(new Date())                                       | 2                         |
-| this.$dn.day('2016-04-22')                                     | 6                         |
-| this.$dn.day('2014-02-14 22:56:47')                            | 3                         |
-| this.$dn.day()                                                 | 2                         |
-| this.$dn.dayText(new Date(), 'en')                             | Monday                    |
-| this.$dn.dayText('2016-01-22', 'es')                           | Viernes                   |
-| this.$dn.dayText('2014-03-22 22:56:47', 'es')                  | Sábado                    |
-| this.$dn.dayText('', 'en')                                     | Monday                    |
-| this.$dn.dayText()                                             | Monday                    |
-| this.$dn.diff(new Date(), '2016-08-21', 'years')               | 2.8                       |
-| this.$dn.diff('2019-03-15', '2016-08-21', 'months')            | 31.2                      |
-| this.$dn.diff('2019-03-15', '2016-08-21')                      | 936.0                     |
-| this.$dn.time()                                                | 18:31:48                  |
+```js
+this.$dn.date(new Date(), 'dd-mm-yyyy', '-') // result = 17-06-2019
+this.$dn.date(new Date(), 'dd-mm-yyyy') // result = 17/06/2019
+this.$dn.date(new Date()) // result = 2019/06/17
+this.$dn.date() // result = 2019/06/17
+this.$dn.howLong(new Date('2019-04-08'), 'en') // result = A few months ago
+this.$dn.howLong('2016-04-22', 'en') // result = More than a year ago
+this.$dn.howLong('2019-06-17 10:56:47', 'es') // result = Hace unas horas
+this.$dn.year(new Date()) // result = 2019
+this.$dn.year('2016-04-22') // result = 2016
+this.$dn.year('2014-04-22 22:56:47') // result = 2014
+this.$dn.year() // result = 2019
+this.$dn.month(new Date()) // result = 06
+this.$dn.month('2016-04-22') // result = 04
+this.$dn.month('2014-02-14 22:56:47') // result = 02
+this.$dn.month() // result = 06
+this.$dn.monthText(new Date(), 'en') // result = June
+this.$dn.monthText('2016-01-22', 'es') // result = Enero
+this.$dn.monthText('2014-03-22 22:56:47', 'es') // result = Marzo
+this.$dn.monthText('', 'en') // result = June
+this.$dn.monthText() // result = June
+this.$dn.day(new Date()) // result = 2
+this.$dn.day('2016-04-22') // result = 6
+this.$dn.day('2014-02-14 22:56:47') // result = 3
+this.$dn.day() // result = 2
+this.$dn.dayText(new Date(), 'en') // result = Monday
+this.$dn.dayText('2016-01-22', 'es') // result = Viernes
+this.$dn.dayText('2014-03-22 22:56:47', 'es') // result = Sábado
+this.$dn.dayText('', 'en') // result = Monday
+this.$dn.dayText() // result = Monday
+this.$dn.diff(new Date(), '2016-08-21', 'years') // result = 2.8
+this.$dn.diff('2019-03-15', '2016-08-21', 'months') // result = 31.2
+this.$dn.diff('2019-03-15', '2016-08-21') // result = 936.0
+this.$dn.time() // result = 18:31:48
+```
