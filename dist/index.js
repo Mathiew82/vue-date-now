@@ -31,15 +31,15 @@
       var _this = this;
 
       Vue.prototype.$dn = {
-        date: function date(_date) {
+        date: function date() {
+          var _date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : new Date();
+
           var format = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'yyyy-mm-dd';
           var separator = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '/';
 
-          var DATE = !_date ? new Date() : _date;
-
-          var YEAR = DATE.getFullYear();
-          var month = DATE.getMonth() + 1;
-          var day = DATE.getDate();
+          var YEAR = _date.getFullYear();
+          var month = _date.getMonth() + 1;
+          var day = _date.getDate();
 
           var MONTH = month < 10 ? '0' + month : month;
           var DAY = day < 10 ? '0' + day : day;
@@ -60,8 +60,7 @@
 
           return result.slice(0, -1);
         },
-        howLong: function howLong() {
-          var dateOrTimestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+        howLong: function howLong(dateOrTimestamp) {
           var lang = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en';
 
           var LANG_TEXTS = require('../languages/' + lang + '.js').texts;

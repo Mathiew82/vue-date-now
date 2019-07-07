@@ -4,12 +4,10 @@ export default {
   },
   install (Vue) {
     Vue.prototype.$dn = {
-      date: (date, format = 'yyyy-mm-dd', separator = '/') => {
-        const DATE = !date ? new Date() : date
-
-        const YEAR = DATE.getFullYear()
-        let month = DATE.getMonth() + 1
-        let day = DATE.getDate()
+      date: (date = new Date(), format = 'yyyy-mm-dd', separator = '/') => {
+        const YEAR = date.getFullYear()
+        let month = date.getMonth() + 1
+        let day = date.getDate()
 
         const MONTH = month < 10 ? `0${month}` : month
         const DAY = day < 10 ? `0${day}` : day
@@ -30,7 +28,7 @@ export default {
 
         return result.slice(0, -1)
       },
-      howLong: (dateOrTimestamp = '', lang = 'en') => {
+      howLong: (dateOrTimestamp, lang = 'en') => {
         const LANG_TEXTS = require(`../languages/${lang}.js`).texts
 
         let difference = null
