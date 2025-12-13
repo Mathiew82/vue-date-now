@@ -22,6 +22,6 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-rename-umd-globals": "^1.0.0",
     "babel-preset-es2015": "^6.24.1",
-    "eslint": "^5.5.0"
+    "eslint": "^9.39.1"
   }
 }
