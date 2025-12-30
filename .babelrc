@@ -1,13 +1,3 @@
 {
-  "presets": ["es2015"],
-  "plugins": [
-     "add-module-exports",
-     "transform-es2015-modules-umd",
-     [
-        "rename-umd-globals",
-        {
-           "index": "VueDateNow"
-        }
-     ]
-  ]
+  "presets": [["@babel/preset-env", { "modules": false }]]
 }
