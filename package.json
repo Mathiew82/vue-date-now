@@ -17,7 +17,8 @@
     "build": "babel src -d dist"
   },
   "files": [
-    "dist"
+    "dist",
+    "languages"
   ],
   "overrides": {
     "json5": "1.0.2",
