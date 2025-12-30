@@ -1,6 +1,6 @@
 # vue-date-now
 
-![](images/Logo_DateNow_Vue-min.png)
+![Logo](logo.png)
 
 Easily work with dates using the available methods.
 
