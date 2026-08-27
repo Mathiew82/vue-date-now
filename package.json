@@ -25,9 +25,9 @@
     "braces": "3.0.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.28.3",
-    "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
+    "@babel/cli": "^8.0.1",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-rename-umd-globals": "^1.0.0",
     "eslint": "^9.39.1"
